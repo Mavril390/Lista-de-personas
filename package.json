@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-toastify": "^8.2.0",
+    "toastify-js": "^1.11.2"
+  }
+}

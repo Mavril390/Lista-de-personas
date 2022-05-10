@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #202124;
+}
+
+h1 {
+  text-align: center;
+  color: #e8eaed;
+}
+
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  padding: 15px 10px;
+}
+
+.li-container {
+  color: darkslategray;
+  margin-top: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+li p {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.btn-delete {
+  background-color: #e31746;
+  color: white;
+  font-weight: bold;
+  padding: 29px 11px 31px 11px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background-color: lightseagreen;
+}
+
+.btn-add {
+  padding: 5px 15px;
+  border: none;
+  color: white;
+  font-family: fantasy;
+  background-color: teal;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: darkcyan;
+}
+
+.empty {
+  color: #e8eaed;
+}
+
+.persona{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "nombre edad borrar";
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.persona--nombre{
+  width: 350px;
+  grid-area: nombre;
+  padding: 10px;
+}
+
+.persona--edad{
+  grid-area: edad;
+  padding: 10px;
+}
+
+.persona--borrar{
+  grid-area: borrar;
+  justify-self: end;
+}
+
+.persona__titulo{
+  font-weight: bold;
+}
+
+.persona__dato{
+  font-size: 25px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1500px){
+  .persona{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 33px;
+    grid-template-areas: "nombre edad"
+                         "borrar borrar";
+  }
+
+  .btn-delete{
+    padding: 7px 65px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .persona--borrar{
+    justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 745px){
+  .persona{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 33px;
+    grid-template-areas: "nombre"
+                         "edad"
+                         "borrar";
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .search{
+    display: grid;
+  }
+
+  li{
+    display: grid;
+  }
+
+  .btn-delete{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
